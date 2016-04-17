@@ -32,7 +32,7 @@ else:
 	for k,v in sum.items():
 		cn = 0
 		while cn<=len(v)-1:
-			str = '%s:%s;'%(k,dat)
+			str = '%s.%s;'%(k,dat)
 			if v[cn] == '':
 				str = str + '%s:00;0\n'%cn
 			else:
