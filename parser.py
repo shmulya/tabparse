@@ -19,11 +19,12 @@ else:
 	sum = {}
 
 	for str in file:
-		srch = re.search('\d',str[1])
-		if srch != None:
-			n = n + 1
-			p = re.compile(r'\s{1,5}')
-			sum.update ([(n,p.split(str[2:])[1:25])])
+		if len(str) > 2:
+			srch = re.search('\d',str[1])
+			if srch != None:
+				n = n + 1
+				p = re.compile(r'\s{1,5}')
+				sum.update ([(n,p.split(str[2:])[1:25])])
 
 	out = open(list[int(dat.split('.')[0])]+'.csv','w')
 	out.write('DATE;TIME;RAD\n')
